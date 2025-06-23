@@ -1,21 +1,34 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { Variants } from 'framer-motion'
 
-const menuVariants = {
-	hidden: { x: '100%' },
+
+const menuVariants: Variants = {
+	hidden: {
+		x: -300, // ← число, а не '-100%'
+	},
 	visible: {
 		x: 0,
 		transition: {
-			type: 'spring',
-			stiffness: 70,
-			damping: 20,
-			staggerChildren: 0.2,
-			delayChildren: 0.5,
+			type: 'spring' as const,
+			stiffness: 300,
+			damping: 30,
+			staggerChildren: 0.1,
+			delayChildren: 0.2,
 		},
 	},
-	exit: { x: '100%', transition: { duration: 0.3 } },
+	exit: {
+		x: -300,
+		transition: { duration: 0.3 },
+	},
 }
+
+
+
+
+
+
 
 const itemVariants = {
 	hidden: { opacity: 0, x: 30 },
@@ -98,19 +111,6 @@ const HamburgerMenu = () => {
 							exit='exit'
 							className='fixed top-0 right-0 w-3/4 h-full bg-white text-black flex flex-col items-start px-8 py-16 z-50'
 						>
-							{['Главная', 'О нас', 'Услуги', 'Контакты'].map(
-								(label, index) => (
-									<motion.div key={label} variants={itemVariants}>
-										<Link
-											to={label === 'Главная' ? '/' : `/${label.toLowerCase()}`}
-											className='block text-lg mb-4 hover:text-blue-500 transition'
-											onClick={() => setIsOpen(false)}
-										>
-											{label}
-										</Link>
-									</motion.div>
-								)
-							)}
 						</motion.div>
 					</>
 				)}

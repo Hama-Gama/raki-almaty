@@ -1,12 +1,11 @@
 import Header from '@/components/Header'
 import About from './components/About'
-import Testimonials from './components/ReviewsSlider'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import Portfolio from './components/Products'
 import Faq from './components/Faq'
 import Hero from './components/Hero'
 import Products from './components/Products'
+import ReviewsSlider from './components/ReviewsSlider'
 
 function App() {
 	return (
@@ -21,14 +20,14 @@ function App() {
 				<section id='about'>
 					<About />
 				</section>
-				<section id='portfolio'>
+				<section id='products'>
 					<Products />
 				</section>
 				<section id='faq'>
 					<Faq />
 				</section>
-				<section id='testimonials'>
-					<Testimonials />
+				<section id='reviews'>
+					<ReviewsSlider />
 				</section>
 				<section id='contact'>
 					<Contact />

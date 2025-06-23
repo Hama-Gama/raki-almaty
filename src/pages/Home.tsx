@@ -1,11 +1,9 @@
 import About from '@/components/About'
-import Testimonials from '@/components/ReviewsSlider'
 import Contact from '@/components/Contact'
 import Hero from '@/components/Hero'
-import Portfolio from '@/components/Products'
 import Faq from '@/components/Faq'
-import Accordion from '@/components/Accordion'
 import Products from '@/components/Products'
+import ReviewsSlider from '@/components/ReviewsSlider'
 
 export default function Home() {
 	return (
@@ -14,8 +12,7 @@ export default function Home() {
 			<About />
 			<Products />
 			<Faq />
-			<Accordion />
-			<Testimonials />
+			<ReviewsSlider />
 			<Contact />
 		</div>
 	)
