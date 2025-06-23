@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Link } from 'react-router-dom'
-import { Variants } from 'framer-motion'
+import type { Variants } from 'framer-motion'
 
 
 const menuVariants: Variants = {
@@ -25,15 +24,6 @@ const menuVariants: Variants = {
 }
 
 
-
-
-
-
-
-const itemVariants = {
-	hidden: { opacity: 0, x: 30 },
-	visible: { opacity: 1, x: 0, transition: { duration: 0.3 } },
-}
 
 const HamburgerMenu = () => {
 	const [isOpen, setIsOpen] = useState(false)
