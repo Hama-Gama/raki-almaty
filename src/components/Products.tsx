@@ -1,53 +1,55 @@
-import { motion, useInView } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useRef } from 'react'
+
 
 type Work = {
 	title: string
-	description: string
+	description?: string // теперь не обязательно
 	price: string
 	image: string
 }
 
+
 const works: Work[] = [
 	{
 		title: 'Мелкий (25-40гр) 28-40шт',
-		// description: 'Классические, сочные, с укропом',
+		// description: 'Маленькие раки идеально подойдут для закуски.',
 		price: '3 000 ₸/кг',
 		image: '/portfolio/1.jpg',
 	},
 	{
 		title: 'Средний (40-50гр) 22-25шт',
-		// description: 'С чесноком и перцем чили',
+		// description: 'Сбалансированный выбор по цене и размеру.',
 		price: '6 000 ₸/кг',
 		image: '/portfolio/2.jpg',
 	},
 	{
 		title: 'Крупный (50-80гр) 15-20шт',
-		// description: 'Доставка в день заказа',
+		// description: 'Сбалансированный выбор по цене и размеру.',
 		price: '8 000 ₸/кг',
 		image: '/portfolio/3.jpg',
 	},
 	{
 		title: 'Отборный (80-120гр) 8-12шт',
-		// description: 'Доставка в день заказа',
+		// description: 'Сбалансированный выбор по цене и размеру.',
 		price: '10 000 ₸/кг',
 		image: '/portfolio/4.jpg',
 	},
 	{
 		title: 'Царский (120+) 8-6шт',
-		// description: 'Доставка в день заказа',
+		// description: 'Сбалансированный выбор по цене и размеру.',
 		price: '15 000 ₸/кг',
 		image: '/portfolio/5.jpg',
 	},
 	{
 		title: 'Классическая варка',
-		// description: 'Доставка в день заказа',
+		// description: 'Сбалансированный выбор по цене и размеру.',
 		price: '1 000 ₸/кг',
 		image: '/portfolio/6.jpg',
 	},
 	{
 		title: 'Сливочная варка',
-		// description: 'Доставка в день заказа',
+		// description: 'Сбалансированный выбор по цене и размеру.',
 		price: '2 000 ₸/кг',
 		image: '/portfolio/7.jpg',
 	},
@@ -55,7 +57,6 @@ const works: Work[] = [
 
 export default function Products() {
 	const ref = useRef(null)
-	const isInView = useInView(ref, { once: true })
 
 	return (
 		<motion.section
@@ -101,7 +102,7 @@ export default function Products() {
 						/>
 						<div className='p-6 text-center tracking-wider'>
 							<h3 className='text-xl font-semibold mb-2'>{work.title}</h3>
-							<p className='text-base text-gray-500 text-sm mb-2'>{work.description}</p>
+							<p className='text-sm text-gray-500 mt-2'>{work.description}</p>
 							<p className='text-xl text-red-600 font-bold'>{work.price}</p>
 						</div>
 					</motion.div>

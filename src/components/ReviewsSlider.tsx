@@ -44,7 +44,6 @@ const ReviewsSlider = () => {
 					spaceBetween={30}
 					slidesPerView={1.2}
 					loop={true}
-					// autoplay={{ delay: 4000 }}
 					pagination={{ clickable: true }}
 					autoplay={{
 						delay: 2000, // ⏱ задержка между слайдами (мс)

@@ -1,6 +1,12 @@
 import { Quote } from 'lucide-react'
 
-const ReviewCard = ({ image, name, text }) => {
+type ReviewCardProps = {
+	image: string
+	name: string
+	text: string
+}
+
+const ReviewCard = ({ image, name, text }: ReviewCardProps) => {
 	return (
 		<div className='bg-white p-6 rounded-2xl shadow-md relative max-w-md mx-auto text-left mb-8'>
 			<Quote className='w-8 h-8 text-gray-400 absolute top-4 right-4' />
