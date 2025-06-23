@@ -1,17 +1,18 @@
 import About from '@/components/About'
-import Testimonials from '@/components/Testimonials'
+import Testimonials from '@/components/ReviewsSlider'
 import Contact from '@/components/Contact'
 import Hero from '@/components/Hero'
-import Portfolio from '@/components/Portfolio'
+import Portfolio from '@/components/Products'
 import Faq from '@/components/Faq'
 import Accordion from '@/components/Accordion'
+import Products from '@/components/Products'
 
 export default function Home() {
 	return (
 		<div>
 			<Hero />
 			<About />
-			<Portfolio />
+			<Products />
 			<Faq />
 			<Accordion />
 			<Testimonials />

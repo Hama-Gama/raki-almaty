@@ -26,7 +26,7 @@ export default function HeroSlider() {
 		<div className='w-full h-screen'>
 			<Swiper
 				modules={[Autoplay]}
-				autoplay={{ delay: 4000, disableOnInteraction: false }}
+				autoplay={{ delay: 2000, disableOnInteraction: true }}
 				loop
 				className='w-full h-full'
 			>

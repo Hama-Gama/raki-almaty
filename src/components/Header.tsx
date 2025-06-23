@@ -32,13 +32,13 @@ const Header = () => {
 					<a href='#about' className='hover:underline'>
 						О нас
 					</a>
-					<a href='#portfolio' className='hover:underline'>
-						Наши работы
+					<a href='#products' className='hover:underline'>
+						Продукция
 					</a>
 					<a href='#faq' className='hover:underline'>
 						FAQ
 					</a>
-					<a href='#testimonials' className='hover:underline'>
+					<a href='#reviews' className='hover:underline'>
 						Отзывы
 					</a>
 					<a href='#contact' className='hover:underline'>
@@ -49,50 +49,50 @@ const Header = () => {
 
 			{/* Mobile Navigation */}
 			<div
-				className={`md:hidden px-4 overflow-hidden transition-all duration-300 ease-in-out ${
-					isOpen ? 'max-h-60 py-4 opacity-100' : 'max-h-0 py-0 opacity-0'
+				className={`md:hidden px-4 overflow-auto transition-all duration-300 ease-in-out ${
+					isOpen ? 'max-h-auto py-4 opacity-100' : 'max-h-0 py-0 opacity-0'
 				}`}
 			>
 				<div className='text-xl flex flex-col gap-2'>
 					<a
 						href='#home'
 						onClick={() => setIsOpen(false)}
-						className='hover:underline'
+						className='hover:underline mb-2 mt-2'
 					>
 						Главная
 					</a>
 					<a
 						href='#about'
 						onClick={() => setIsOpen(false)}
-						className='hover:underline'
+						className='hover:underline mb-2'
 					>
 						О нас
 					</a>
 					<a
-						href='#portfolio'
+						href='#products'
 						onClick={() => setIsOpen(false)}
-						className='hover:underline'
+						className='hover:underline mb-2'
 					>
-						Наши работы
+						Продукция
 					</a>
 					<a
 						href='#faq'
 						onClick={() => setIsOpen(false)}
-						className='hover:underline'
+						className='hover:underline mb-2'
 					>
 						FAQ
 					</a>
 					<a
-						href='#testimonials'
+						href='#reviews'
 						onClick={() => setIsOpen(false)}
-						className='hover:underline'
+						className='hover:underline mb-2'
 					>
 						Отзывы
 					</a>
 					<a
 						href='#contact'
 						onClick={() => setIsOpen(false)}
-						className='hover:underline'
+						className='hover:underline mb-2'
 					>
 						Контакты
 					</a>

@@ -10,44 +10,56 @@ type Work = {
 
 const works: Work[] = [
 	{
-		title: 'Варёные раки',
-		description: 'Классические, сочные, с укропом',
-		price: '5 000 ₸/кг',
+		title: 'Мелкий (25-40гр) 28-40шт',
+		// description: 'Классические, сочные, с укропом',
+		price: '3 000 ₸/кг',
 		image: '/portfolio/1.jpg',
 	},
 	{
-		title: 'Острые раки',
-		description: 'С чесноком и перцем чили',
-		price: '5 500 ₸/кг',
+		title: 'Средний (40-50гр) 22-25шт',
+		// description: 'С чесноком и перцем чили',
+		price: '6 000 ₸/кг',
 		image: '/portfolio/2.jpg',
 	},
 	{
-		title: 'Живые раки',
-		description: 'Доставка в день заказа',
-		price: '4 500 ₸/кг',
+		title: 'Крупный (50-80гр) 15-20шт',
+		// description: 'Доставка в день заказа',
+		price: '8 000 ₸/кг',
 		image: '/portfolio/3.jpg',
 	},
 	{
-		title: 'Живые раки',
-		description: 'Доставка в день заказа',
-		price: '4 500 ₸/кг',
+		title: 'Отборный (80-120гр) 8-12шт',
+		// description: 'Доставка в день заказа',
+		price: '10 000 ₸/кг',
 		image: '/portfolio/4.jpg',
 	},
 	{
-		title: 'Живые раки',
-		description: 'Доставка в день заказа',
-		price: '4 500 ₸/кг',
+		title: 'Царский (120+) 8-6шт',
+		// description: 'Доставка в день заказа',
+		price: '15 000 ₸/кг',
 		image: '/portfolio/5.jpg',
+	},
+	{
+		title: 'Классическая варка',
+		// description: 'Доставка в день заказа',
+		price: '1 000 ₸/кг',
+		image: '/portfolio/6.jpg',
+	},
+	{
+		title: 'Сливочная варка',
+		// description: 'Доставка в день заказа',
+		price: '2 000 ₸/кг',
+		image: '/portfolio/7.jpg',
 	},
 ]
 
-export default function Portfolio() {
+export default function Products() {
 	const ref = useRef(null)
 	const isInView = useInView(ref, { once: true })
 
 	return (
 		<motion.section
-			id='portfolio'
+			id='products'
 			ref={ref}
 			initial={{ opacity: 0, y: 50 }}
 			whileInView={{ opacity: 1, y: 0 }}
@@ -85,12 +97,12 @@ export default function Portfolio() {
 						<img
 							src={work.image}
 							alt={work.title}
-							className='w-full h-64 object-cover'
+							className='rounded-2xl w-full h-64 object-cover p-2'
 						/>
-						<div className='p-4 text-center'>
+						<div className='p-6 text-center tracking-wider'>
 							<h3 className='text-xl font-semibold mb-2'>{work.title}</h3>
-							<p className='text-gray-500 text-sm mb-2'>{work.description}</p>
-							<p className='text-red-600 font-bold'>{work.price}</p>
+							<p className='text-base text-gray-500 text-sm mb-2'>{work.description}</p>
+							<p className='text-xl text-red-600 font-bold'>{work.price}</p>
 						</div>
 					</motion.div>
 				))}
